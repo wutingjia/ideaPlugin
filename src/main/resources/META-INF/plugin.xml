@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>org.example.my-first-plugin</id>
+    <name>First</name>
+    <vendor email="wutingjia@meituan.com" url="https://sh.meituan.com/">meituan</vendor>
+
+    <description>My first PluginMy first PluginMy first PluginMy first PluginMy first PluginMy first PluginMy first Plugin</description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.wutingjia.plugin.PopupDialogAction" class="com.wutingjia.plugin.PopupDialogAction"
+                text="Pop Dialog Action" description="Test">
+            <override-text place="MainMenu" text="Pop Dialog Action"/>
+            <keyboard-shortcut first-keystroke="control alt A" second-keystroke="C" keymap="$default"/>
+            <mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
